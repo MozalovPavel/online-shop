@@ -1,0 +1,13 @@
+.navbar {
+    height: 63px;
+    width: 100%;
+    background-color: #222;
+}
+
+.logo {
+    margin: 17px 0;    
+}
+
+.cart {
+    margin: 0;
+}

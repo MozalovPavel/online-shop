@@ -5,32 +5,40 @@ import testImage from '../../public/test-image.png';
 
 // FIXME переместить
 
-interface IProductCardProps {
+interface IProduct {
+    title: string;
+    sizes: ProductCardSizes[];
+    oldPrice: number;
+    newPrice: number;
+}
 
+export enum ProductCardSizes {
+    Small = "Small",
+    Medium = "Medium",
+    Big = "Big"
+}
+
+interface IProductCardProps {
+    product: IProduct;
 }
 
 // FIXME вынести высоты
 
 const ProductCard = (props: IProductCardProps) => {
-    // const {} = props;
+    const {product} = props;
+    const {newPrice, oldPrice, sizes, title} = product
     return (
         <article className={styles.root}>
             <Image 
                 className={styles.image}
                 src={testImage} 
-                width={298} 
-                height={487} 
                 alt={"card alternative"}
             />
-            <span className={styles.title}>Kirsten Sequin Open Back Long Sleeve Dress in Blue</span>
-            <span className={styles.size}>Small, Medium</span>
+            <span className={styles.title}>{title}</span>
+            <span className={styles.size}>{sizes.join(", ")}</span>
             <span className={styles.prices}>
-                <span className={styles.old}>
-                    $80.00
-                </span>
-                <span className={styles.new}>
-                    $80.00
-                </span>
+                <span className={styles.old}>${oldPrice}</span>
+                <span className={styles.new}>${newPrice}</span>
             </span>
         </article>
     );

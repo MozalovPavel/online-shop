@@ -1,0 +1,44 @@
+.root {
+    color: #111;
+    max-width: 298px;
+    cursor: pointer;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: rgb(138, 138, 138);
+}
+
+.title {
+    display: block;
+    font-weight: 400;
+    line-height: 19px;
+    margin-top: 10px;
+}
+
+.size {
+    display: block;
+    font-size: 11px;
+    margin: 6px 0;
+    line-height: 15px;
+    color: #62636D;
+}
+
+.prices {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.old {
+    text-decoration: line-through;
+    color: #62636D;
+    margin-right: 4px;
+}
+
+.new {
+    color: #F97369;
+}

@@ -6,7 +6,7 @@ import commonStyles from '../styles/CommonLayout.module.css';
 import logo from '../../public/logo.svg';
 
 const Header = () => (
-	<nav className={`${styles.navbar} ${commonStyles.layoutPaddings}`}>
+	<header className={`${styles.navbar} ${commonStyles.layoutPaddings}`}>
 		<Link href="/">
 			<Image 
 				className={styles.logo}
@@ -20,7 +20,7 @@ const Header = () => (
 			<span>🛒</span>
 			<p>$0.00</p>
 		</div>
-	</nav>
+	</header>
 );
    
    export default Header;

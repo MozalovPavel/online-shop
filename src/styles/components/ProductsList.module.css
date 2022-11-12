@@ -1,0 +1,11 @@
+.productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px -25px;
+}
+
+.cardContainer {
+    flex: 0 0 25%;
+    margin-bottom: 70px;
+    padding: 0 25px;
+}

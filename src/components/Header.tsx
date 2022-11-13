@@ -14,6 +14,7 @@ const Header = () => (
 				alt="Lucy in the sky inc"
 				width={143}
       			height={30} 
+				priority
 			/>
 		</Link>
 		<div className={styles.cart}>

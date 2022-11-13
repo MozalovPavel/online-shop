@@ -1,13 +1,15 @@
 export interface IProduct {
     id: number;
-    title: string;
+    name: string;
     sizes: ProductCardSizes[];
-    oldPrice: number;
-    newPrice: number;
+    image: string;
+    description: string;
+    price: number;
+    special: number;
 }
 
 export enum ProductCardSizes {
     Small = "Small",
     Medium = "Medium",
-    Big = "Big"
+    Large = "Large"
 }

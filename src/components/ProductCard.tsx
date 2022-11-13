@@ -2,21 +2,9 @@ import Image from 'next/image';
 import styles from '../styles/components/ProductCard.module.css';
 
 import testImage from '../../public/test-image.png';
+import { IProduct } from '../data/product/Product';
 
 // FIXME переместить
-
-interface IProduct {
-    title: string;
-    sizes: ProductCardSizes[];
-    oldPrice: number;
-    newPrice: number;
-}
-
-export enum ProductCardSizes {
-    Small = "Small",
-    Medium = "Medium",
-    Big = "Big"
-}
 
 interface IProductCardProps {
     product: IProduct;

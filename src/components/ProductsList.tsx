@@ -1,62 +1,52 @@
 import Caption from "./Caption";
-import ProductCard, { ProductCardSizes } from "./ProductCard";
+import ProductCard from "./ProductCard";
 import styles from '../styles/components/ProductsList.module.css';
+import { getProducts, useProducts } from "../store/products";
+import { wrapper } from "../store/store";
+import Pagination from "./Pagination/Pagination";
+import { useAppDispatch } from "../store/hooks";
 
 interface IProductsListProps {
     title: string;
 }
 
-const products = [
-    {
-        title: "Long Sleeve Dress in Blue",
-        sizes: [ProductCardSizes.Small, ProductCardSizes.Medium],
-        oldPrice: 99,
-        newPrice: 80,
-        id: 1
-    },
-    {
-        title: "Kirsten Sequin Open Back Long Sleeve Dress in Blue",
-        sizes: [ProductCardSizes.Small, ProductCardSizes.Medium],
-        oldPrice: 99,
-        newPrice: 80,
-        id: 2
-    },
-    {
-        title: "Kirsten Sequin Open Back Long",
-        sizes: [ProductCardSizes.Small, ProductCardSizes.Medium],
-        oldPrice: 99,
-        newPrice: 80,
-        id: 3
-    },
-    {
-        title: "Kirsten Sequin Open Back Long Sleeve Dress in Blue dasd asd asd asd asd asd asd ",
-        sizes: [ProductCardSizes.Small, ProductCardSizes.Medium],
-        oldPrice: 99,
-        newPrice: 80,
-        id: 4
-    },
-    {
-        title: "Kirsten Sequin Open Back Long Sleeve Dress in Blue",
-        sizes: [ProductCardSizes.Small, ProductCardSizes.Medium],
-        oldPrice: 99,
-        newPrice: 80,
-        id: 5
-    },
-];
+const CARDS_COUNT_ON_PAGE = 8;
 
-const ProductsList = ({title}: IProductsListProps) => {
+const ProductsList = ({ title }: IProductsListProps) => {
+    const { data, pending } = useProducts();
+    const { items: products = [], page = 1, totalPages = 0 } = data || {};
+
+    const dispatch = useAppDispatch();
+    const onPageChange = (newPage: number) => {
+        dispatch(getProducts(newPage));
+    };
+
     return (
         <article>
             <Caption>{title}</Caption>
             <div className={styles.productsContainer}>
                 {products.map(product => (
-                    <div className={styles.cardContainer}>
-                        <ProductCard key={product.id} product={product} />
+                    <div key={product.id} className={styles.cardContainer}>
+                        <ProductCard product={product} />
                     </div>
                 ))}
             </div>
+            <Pagination
+                currentPage={page}
+                pageSize={CARDS_COUNT_ON_PAGE}
+                isLoading={pending}
+                totalPages={totalPages}
+                onPageChange={onPageChange}
+            />
         </article>
     );
 };
 
 export default ProductsList;
+
+ProductsList.getInitialProps = wrapper.getInitialPageProps(
+    ({ dispatch }) =>
+        async () => {
+            await dispatch(getProducts());
+        }
+);

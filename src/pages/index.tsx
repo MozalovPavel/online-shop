@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import ProductsList from '../components/ProductsList';
+import { getProducts } from '../store/products';
+import { wrapper } from '../store/store';
 import styles from '../styles/pages/Home.module.css';
 
 // FIXME унифицировать title
@@ -19,3 +21,10 @@ const Home = () => {
 };
 
 export default Home;
+
+Home.getInitialProps = wrapper.getInitialPageProps(
+  ({ dispatch }) =>
+    async () => {
+      await dispatch(getProducts());
+    }
+);

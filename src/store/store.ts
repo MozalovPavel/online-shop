@@ -8,10 +8,12 @@ import {
     CombinedState
 } from '@reduxjs/toolkit';
 import { createWrapper, HYDRATE } from 'next-redux-wrapper';
+import { cartReducer } from './cart';
 import { productsReducer } from './products';
 
 const reducers = {
-    products: productsReducer
+    products: productsReducer,
+    cart: cartReducer
 };
 
 const combinedReducer = combineReducers(reducers);

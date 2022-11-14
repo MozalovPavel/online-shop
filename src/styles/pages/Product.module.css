@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    margin: 25px 0;
+}
+
+.left {
+    flex: 0 0 auto;
+    margin-right: 25px;
+}
+
+.right {
+    flex: 1 1 50%;
+}
+
+.description {
+    font-size: 16px;
+}
+
+.special {
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 10px;
+}

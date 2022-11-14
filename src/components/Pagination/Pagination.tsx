@@ -20,16 +20,10 @@ const Pagination = (props: IPaginationProps) => {
         currentPage
     } = props;
 
-    console.log({props});
-    
-
     const paginationRange = usePagination({
         currentPage,
         totalPages,
     })!;
-
-    console.log({paginationRange});
-    
 
     if (currentPage === 0 || paginationRange.length < 2) {
         return null;

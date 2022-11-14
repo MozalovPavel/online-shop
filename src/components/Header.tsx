@@ -6,7 +6,7 @@ import commonStyles from '../styles/CommonLayout.module.css';
 import logo from '../../public/logo.svg';
 
 const Header = () => (
-	<header className={`${styles.navbar} ${commonStyles.layoutPaddings}`}>
+	<header className={`${styles.navbar} ${commonStyles.leftRightlayoutPaddings}`}>
 		<Link href="/">
 			<Image 
 				className={styles.logo}

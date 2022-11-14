@@ -1,6 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { IPaginatable } from '../../data/Paginatable';
-import { IProduct } from '../../data/product/Product';
+import { IProduct } from '../../data/Product';
 import { getProducts } from './actions';
 
 export type ProductsState = {

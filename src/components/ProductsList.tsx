@@ -10,8 +10,6 @@ interface IProductsListProps {
     title: string;
 }
 
-const CARDS_COUNT_ON_PAGE = 8;
-
 const ProductsList = ({ title }: IProductsListProps) => {
     const { data, pending } = useProducts();
     const { items: products = [], page = 1, totalPages = 0 } = data || {};
@@ -33,7 +31,6 @@ const ProductsList = ({ title }: IProductsListProps) => {
             </div>
             <Pagination
                 currentPage={page}
-                pageSize={CARDS_COUNT_ON_PAGE}
                 isLoading={pending}
                 totalPages={totalPages}
                 onPageChange={onPageChange}

@@ -5,7 +5,6 @@ import styles from '../../styles/components/Pagination.module.css';
 interface IPaginationProps {
     currentPage: number;
     totalPages: number;
-    pageSize: number;
     isLoading?: boolean;
 
     onPageChange: (page: number) => void;
@@ -18,8 +17,7 @@ const Pagination = (props: IPaginationProps) => {
     const {
         onPageChange,
         totalPages,
-        currentPage,
-        pageSize
+        currentPage
     } = props;
 
     console.log({props});
@@ -28,8 +26,10 @@ const Pagination = (props: IPaginationProps) => {
     const paginationRange = usePagination({
         currentPage,
         totalPages,
-        pageSize
     })!;
+
+    console.log({paginationRange});
+    
 
     if (currentPage === 0 || paginationRange.length < 2) {
         return null;

@@ -1,0 +1,23 @@
+.root {
+    position: relative;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.ordersCount {
+    position: absolute;
+    bottom: -4px;
+    right: -6px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    font-weight: 800;
+    font-size: 9px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #F97369;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -20,7 +20,7 @@ const OrderRow = (props: IOrderRowProps) => {
         <div className={styles.root}>
             <span className={styles.name}>{name}</span>
             <span className={styles.size}>{size}</span>
-            <span className={styles.specialInCents}>${specialInCents/10}</span>
+            <span className={styles.specialInCents}>${specialInCents/100}</span>
             <span className={styles.removeButton} onClick={handleRemove}>X</span>
         </div>
     );

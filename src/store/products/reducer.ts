@@ -16,17 +16,17 @@ const initialState: ProductsState = {
 
 export const productsReducer = createReducer(initialState, builder => {
   builder
-    .addCase(getProducts.pending, state => {
-      state.pending = true;
-    })
-    .addCase(getProducts.fulfilled, (state, { payload }) => {
-      state.pending = false;
-      state.data = payload;
-    })
-    .addCase(getProducts.rejected, state => {
-      state.pending = false;
-      state.error = true;
-    });
+    .addCase(getProducts.pending, state => ({...state, pending: true}))
+    .addCase(getProducts.fulfilled, (state, { payload }) => ({
+      ...state,
+      pending: false,
+      data: payload
+    }))
+    .addCase(getProducts.rejected, state => ({
+      ...state,
+      pending: false,
+      error: true
+    }));
 });
 
 export default productsReducer;

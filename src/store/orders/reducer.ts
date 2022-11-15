@@ -1,6 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { IProductOrder } from '../../data/ProductOrder/ProductOrder';
-import { addOrder, removeOrder } from './actions';
+import { addOrder, cleanOrders, removeOrder } from './actions';
 
 export interface IOrdersState {
   orders: IProductOrder[];
@@ -17,6 +17,9 @@ export const ordersReducer = createReducer(initialState, builder => {
     ))
     .addCase(removeOrder, (state, action) => (
       { ...state, orders: state.orders.filter(order => order.orderId !== action.payload) }
+    ))
+    .addCase(cleanOrders, state => (
+      { ...state, orders: [] }
     ));
 });
 

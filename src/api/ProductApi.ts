@@ -12,4 +12,4 @@ class ProductApi extends BaseApi {
     } 
 }
 
-export const productApi = new ProductApi("product")
+export const productApi = new ProductApi("product");

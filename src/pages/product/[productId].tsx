@@ -10,7 +10,7 @@ import { useState } from 'react';
 import { useAppDispatch } from '../../store/hooks';
 import { addOrder } from '../../store/orders';
 import ProductSizesSelector from '../../components/ProductSizesSelector/ProductSizesSelector';
-import { ProductOrderPipe } from '../../data/ProductOrder/ProductOrderHelper';
+import { ProductOrderPipe } from '../../data/ProductOrder/ProductOrderPipe';
 
 interface IProductProps {
   product: IProduct;

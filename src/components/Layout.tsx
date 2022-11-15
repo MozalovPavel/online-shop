@@ -1,4 +1,4 @@
-import Header from './Header';
+import Header from './Header/Header';
 import {PropsWithChildren} from 'react';
 import commonStyles from '../styles/CommonLayout.module.css';
 import classNames from 'classnames';

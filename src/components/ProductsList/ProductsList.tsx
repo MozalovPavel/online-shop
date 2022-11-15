@@ -1,10 +1,10 @@
-import Caption from "./Caption";
-import ProductCard from "./ProductCard";
-import styles from '../styles/components/ProductsList.module.css';
-import { getProducts, useProducts } from "../store/products";
-import { wrapper } from "../store/store";
-import Pagination from "./Pagination/Pagination";
-import { useAppDispatch } from "../store/hooks";
+import Caption from "../Caption/Caption";
+import ProductCard from "../ProductCard/ProductCard";
+import styles from './ProductsList.module.css';
+import { getProducts, useProducts } from "../../store/products";
+import { wrapper } from "../../store/store";
+import Pagination from "../Pagination/Pagination";
+import { useAppDispatch } from "../../store/hooks";
 
 interface IProductsListProps {
     title: string;

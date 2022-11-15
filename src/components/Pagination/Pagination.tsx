@@ -1,6 +1,6 @@
 import classnames from "classnames";
 import { DOTS, usePagination } from "./usePagination";
-import styles from '../../styles/components/Pagination.module.css';
+import styles from './Pagination.module.css';
 
 interface IPaginationProps {
     currentPage: number;
@@ -12,6 +12,8 @@ interface IPaginationProps {
 
 // FIXME поправить
 // FIXME переместить стили к компонентам
+
+// FIXME вынести хендлеры
 
 const Pagination = (props: IPaginationProps) => {
     const {

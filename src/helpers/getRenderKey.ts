@@ -1,0 +1,1 @@
+export const getRenderKey = (): number => new Date().getTime();

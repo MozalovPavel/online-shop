@@ -2,21 +2,23 @@ import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { ParsedUrlQuery } from 'querystring';
 import { productApi } from '../../api/ProductApi';
-import Caption from '../../components/Caption';
+import Caption from '../../components/Caption/Caption';
 import { IProduct, ProductSize } from '../../data/Product';
 import Image from 'next/image';
 import styles from '../../styles/pages/Product.module.css';
-import ProductSizesSelector from '../../components/ProductSizes';
 import { useState } from 'react';
 import { useAppDispatch } from '../../store/hooks';
-import { addOrderToCart } from '../../store/cart';
+import { addOrder } from '../../store/orders';
+import ProductSizesSelector from '../../components/ProductSizesSelector/ProductSizesSelector';
+import { ProductOrderPipe } from '../../data/ProductOrder/ProductOrderHelper';
 
 interface IProductProps {
   product: IProduct;
 }
 
 const Product = (props: IProductProps) => {
-  const { product: { id, name, description, image, special, sizes } } = props;
+  const { product } = props;
+  const { name, description, image, special, sizes } = product;
 
   const [currentSize, setCurrentSize] = useState(sizes[0]);
 
@@ -27,7 +29,7 @@ const Product = (props: IProductProps) => {
   const dispatch = useAppDispatch();
 
   const onAddButtonClick = () => {
-    dispatch(addOrderToCart({id, size: currentSize}));
+    dispatch(addOrder(ProductOrderPipe.fromProduct(product, currentSize)));
   };
 
   return (
@@ -55,7 +57,7 @@ const Product = (props: IProductProps) => {
               {special}
             </div>
             <div>
-              <ProductSizesSelector initialSize={currentSize} sizes={sizes} onChange={handleChangeSize} />
+              <ProductSizesSelector value={currentSize} sizes={sizes} onChange={handleChangeSize} />
             </div>
 
             <button onClick={onAddButtonClick}>Add to cart</button>

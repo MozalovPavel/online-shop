@@ -1,22 +1,20 @@
-import { ChangeEventHandler } from "react";
-import { IProduct, ProductSize } from "../data/Product";
-import styles from '../styles/components/ProductCard.module.css';
+import { ProductSize } from "../../data/Product";
 
 interface IProductSizesSelectorProps {
     sizes: ProductSize[];
-    initialSize: ProductSize;
+    value: ProductSize;
     onChange: (size: ProductSize) => void;
 }
 
 const ProductSizesSelector = (props: IProductSizesSelectorProps) => {
-    const { sizes, onChange, initialSize } = props;
+    const { sizes, onChange, value } = props;
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         onChange(event.target.value as ProductSize);
     };
 
     return (
-        <div className={styles.root}>
+        <div>
             Size
 
             {sizes.map(size => (
@@ -24,8 +22,7 @@ const ProductSizesSelector = (props: IProductSizesSelectorProps) => {
                     key={size}
                     type="radio"
                     name="sizes"
-                    value={size}
-                    defaultValue={initialSize}
+                    value={value}
                     onChange={handleChange}
                 />
             ))}

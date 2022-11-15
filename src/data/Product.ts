@@ -4,8 +4,10 @@ export interface IProduct {
     sizes: ProductSize[];
     image: string;
     description: string;
-    price: number;
-    special: number;
+    price: string;
+    special: string;
+    specialInCents: number;
+    priceInCents: number;
 }
 
 export enum ProductSize {

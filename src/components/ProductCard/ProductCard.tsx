@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import styles from '../styles/components/ProductCard.module.css';
-import { IProduct } from '../data/Product';
+import styles from './ProductCard.module.css';
+import { IProduct } from '../../data/Product';
 import Link from 'next/link';
 
 // FIXME переместить

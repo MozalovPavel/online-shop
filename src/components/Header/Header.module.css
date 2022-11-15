@@ -4,12 +4,10 @@
     background-color: #222;
     position: sticky;
     top: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
-.logo {
-    margin: 17px 0;    
-}
-
-.cart {
-    margin: 0;
+.logo, .cart {
+    margin-top: 17px;    
 }

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import ProductsList from '../components/ProductsList';
+import ProductsList from '../components/ProductsList/ProductsList';
 import { getProducts } from '../store/products';
 import { wrapper } from '../store/store';
 import styles from '../styles/pages/Home.module.css';

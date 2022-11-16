@@ -41,16 +41,14 @@ const Product = (props: IProductProps) => {
       <section>
         <Caption>{name}</Caption>
         <div className={styles.container}>
-          <div className={styles.left}>
-            <Image
-              className={styles.image}
-              src={image}
-              alt={name}
-              width={330}
-              height={540}
-            />
-          </div>
-          <div className={styles.right}>
+          <Image
+            className={styles.image}
+            src={image}
+            alt={name}
+            width={330}
+            height={540}
+          />
+          <div className={styles.infoContainer}>
             <div className={styles.description}>
               {description}
             </div>

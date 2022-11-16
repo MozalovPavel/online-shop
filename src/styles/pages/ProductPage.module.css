@@ -5,14 +5,11 @@
 
 .image {
     object-fit: cover;
-}
-
-.left {
     flex: 0 0 auto;
     margin-right: 25px;
 }
 
-.right {
+.infoContainer {
     flex: 1 1 50%;
 }
 
@@ -23,13 +20,30 @@
 .special {
     font-weight: 600;
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .sizeSelector {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .addButton {
-    margin-top: 10px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: block;
+    }
+
+    .infoContainer {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .image {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
 }

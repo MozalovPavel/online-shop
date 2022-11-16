@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+}
+
+.positionsList {
+  flex: 1 0 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment {
+  flex: 1 0 30%;
+  padding-left: 20px;
+}

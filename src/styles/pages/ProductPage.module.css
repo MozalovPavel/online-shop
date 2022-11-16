@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    margin: 25px 0;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.left {
+    flex: 0 0 auto;
+    margin-right: 25px;
+}
+
+.right {
+    flex: 1 1 50%;
+}
+
+.description {
+    font-size: 16px;
+}
+
+.special {
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.sizeSelector {
+    margin-top: 10px;
+}
+
+.addButton {
+    margin-top: 10px;
+}

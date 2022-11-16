@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import ProductsList from '../components/ProductsList/ProductsList';
+import Products from '../components/pages/Home/Products/Products';
 import { getProducts } from '../store/products';
 import { wrapper } from '../store/store';
 import styles from '../styles/pages/HomePage.module.css';
@@ -12,7 +12,7 @@ const HomePage = () => {
         <title>Online shop</title>
       </Head>
       <section className={styles.products}>
-        <ProductsList title='New In' />
+        <Products title='New In' />
       </section>
     </div>
   )

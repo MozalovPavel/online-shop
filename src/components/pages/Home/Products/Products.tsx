@@ -1,16 +1,16 @@
-import Caption from "../Caption/Caption";
+import Caption from "../../../common/Caption/Caption";
 import ProductCard from "../ProductCard/ProductCard";
-import styles from './ProductsList.module.css';
-import { getProducts, useProducts } from "../../store/products";
-import { wrapper } from "../../store/store";
-import Pagination from "../Pagination/Pagination";
-import { useAppDispatch } from "../../store/hooks";
+import styles from './Products.module.css';
+import { getProducts, useProducts } from "../../../../store/products";
+import { wrapper } from "../../../../store/store";
+import Pagination from "../../../controls/Pagination/Pagination";
+import { useAppDispatch } from "../../../../store/hooks";
 
-interface IProductsListProps {
+interface IProductsProps {
     title: string;
 }
 
-const ProductsList = ({ title }: IProductsListProps) => {
+const Products = ({ title }: IProductsProps) => {
     const { data, pending } = useProducts();
     const { items: products = [], page = 1, totalPages = 0 } = data || {};
 
@@ -39,9 +39,9 @@ const ProductsList = ({ title }: IProductsListProps) => {
     );
 };
 
-export default ProductsList;
+export default Products;
 
-ProductsList.getInitialProps = wrapper.getInitialPageProps(
+Products.getInitialProps = wrapper.getInitialPageProps(
     ({ dispatch }) =>
         async () => {
             await dispatch(getProducts());

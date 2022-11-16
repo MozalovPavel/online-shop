@@ -34,13 +34,13 @@
 }
 
 .arrow {
-    background: center no-repeat url("../../../public/icons/arrow.svg");
+    background: center no-repeat url("../../../../public/icons/arrow.svg");
     display: inline-block;
 }
 
 .doubleArrow {
     position: relative;
-    background: center no-repeat url("../../../public/icons/doubleArrow.svg");
+    background: center no-repeat url("../../../../public/icons/doubleArrow.svg");
     display: inline-block;
 }
 

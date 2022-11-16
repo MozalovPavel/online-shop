@@ -1,4 +1,4 @@
-import { ProductSize } from "../../data/Product";
+import { ProductSize } from "../../../../data/Product";
 import styles from "./ProductSizesSelector.module.css";
 
 interface IProductSizesSelectorProps {
@@ -21,7 +21,7 @@ const ProductSizesSelector = (props: IProductSizesSelectorProps) => {
 
             <div className={styles.sizesContainer}>
                 {sizes.map(size => (
-                    <label className={styles.sizeItem}>
+                    <label key={size} className={styles.sizeItem}>
                         <input
                             key={size}
                             type="radio"

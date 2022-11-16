@@ -1,12 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './Header.module.css';
-import commonStyles from '../../styles/CommonLayout.module.css';
 import { useRouter } from 'next/router'
-
-import logo from '../../../public/logo.svg';
+import styles from './Header.module.css';
+import commonStyles from '../../../styles/CommonLayout.module.css';
+import logo from '../../../../public/logo.svg';
 import Cart from '../Cart/Cart';
-import { useOrders } from '../../store/orders/hooks';
+import { useOrders } from '../../../store/orders/hooks';
 
 // FIXME вынести роуты в хелпер
 

@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Caption from '../../components/Caption/Caption';
-import CartPayment from '../../components/pages/Cart/CartPayment/CartPayment';
+import Caption from '../../components/common/Caption/Caption';
+import CartPayment from '../../components/pages/Cart/Payment/CartPayment';
 import CartOrderRow from '../../components/pages/Cart/OrderRow/CartOrderRow';
 import { ProductOrderPipe } from '../../data/ProductOrder/ProductOrderPipe';
 import { createOrder } from '../../store/checkout';

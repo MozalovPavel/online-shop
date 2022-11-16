@@ -2,14 +2,14 @@ import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { ParsedUrlQuery } from 'querystring';
 import { productApi } from '../../api/ProductApi';
-import Caption from '../../components/Caption/Caption';
+import Caption from '../../components/common/Caption/Caption';
 import { IProduct, ProductSize } from '../../data/Product';
 import Image from 'next/image';
 import styles from '../../styles/pages/ProductPage.module.css';
 import { useState } from 'react';
 import { useAppDispatch } from '../../store/hooks';
 import { addOrder } from '../../store/orders';
-import ProductSizesSelector from '../../components/ProductSizesSelector/ProductSizesSelector';
+import ProductSizesSelector from '../../components/pages/Product/ProductSizesSelector/ProductSizesSelector';
 import { ProductOrderPipe } from '../../data/ProductOrder/ProductOrderPipe';
 import { Button } from '../../components/controls/Button/Button';
 

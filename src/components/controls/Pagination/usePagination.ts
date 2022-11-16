@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { range } from "../../helpers/range";
+import { range } from "../../../helpers/range";
 
 interface IUsePaginationProps {
     totalPages: number;

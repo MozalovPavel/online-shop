@@ -1,4 +1,5 @@
 import { ProductSize } from "../../data/Product";
+import styles from "./ProductSizesSelector.module.css";
 
 interface IProductSizesSelectorProps {
     sizes: ProductSize[];
@@ -6,6 +7,7 @@ interface IProductSizesSelectorProps {
     onChange: (size: ProductSize) => void;
 }
 
+// FIXME обернуть мемо хуками большие поддеревья
 const ProductSizesSelector = (props: IProductSizesSelectorProps) => {
     const { sizes, onChange, value } = props;
 
@@ -15,17 +17,26 @@ const ProductSizesSelector = (props: IProductSizesSelectorProps) => {
 
     return (
         <div>
-            Size
+            <span className={styles.title}>Size</span>
 
-            {sizes.map(size => (
-                <input
-                    key={size}
-                    type="radio"
-                    name="sizes"
-                    value={value}
-                    onChange={handleChange}
-                />
-            ))}
+            <div className={styles.sizesContainer}>
+                {sizes.map(size => (
+                    <label className={styles.sizeItem}>
+                        <input
+                            key={size}
+                            type="radio"
+                            name="sizes"
+                            value={size}
+                            checked={size === value}
+                            onChange={handleChange}
+                            className={styles.input}
+                        />
+                        <span className={styles.sizeName}>
+                            {size}
+                        </span>
+                    </label>
+                ))}
+            </div>
 
         </div>
     );

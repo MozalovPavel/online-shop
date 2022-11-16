@@ -20,16 +20,16 @@ const Product = (props: IProductProps) => {
   const { product } = props;
   const { name, description, image, special, sizes } = product;
 
-  const [currentSize, setCurrentSize] = useState(sizes[0]);
+  const [selectedSize, setSelectedSize] = useState(sizes[0]);
 
   const handleChangeSize = (size: ProductSize) => {
-    setCurrentSize(currentSize);
+    setSelectedSize(size);
   };
 
   const dispatch = useAppDispatch();
 
   const onAddButtonClick = () => {
-    dispatch(addOrder(ProductOrderPipe.fromProduct(product, currentSize)));
+    dispatch(addOrder(ProductOrderPipe.fromProduct(product, selectedSize)));
   };
 
   return (
@@ -56,11 +56,13 @@ const Product = (props: IProductProps) => {
             <div className={styles.special}>
               {special}
             </div>
-            <div>
-              <ProductSizesSelector value={currentSize} sizes={sizes} onChange={handleChangeSize} />
+            <div className={styles.sizeSelector}>
+              <ProductSizesSelector value={selectedSize} sizes={sizes} onChange={handleChangeSize} />
             </div>
 
-            <button onClick={onAddButtonClick}>Add to cart</button>
+            <button className={styles.addButton} onClick={onAddButtonClick}>
+              Add to cart
+            </button>
           </div>
         </div>
       </section>

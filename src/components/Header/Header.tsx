@@ -15,7 +15,7 @@ const Header = () => {
 	const router  = useRouter();
 
 	const goToOrders = () => {
-		router.push("/orders");
+		router.push("/cart");
 	};
 
 	return (

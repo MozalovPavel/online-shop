@@ -5,12 +5,13 @@ import { productApi } from '../../api/ProductApi';
 import Caption from '../../components/Caption/Caption';
 import { IProduct, ProductSize } from '../../data/Product';
 import Image from 'next/image';
-import styles from '../../styles/pages/Product.module.css';
+import styles from '../../styles/pages/ProductPage.module.css';
 import { useState } from 'react';
 import { useAppDispatch } from '../../store/hooks';
 import { addOrder } from '../../store/orders';
 import ProductSizesSelector from '../../components/ProductSizesSelector/ProductSizesSelector';
 import { ProductOrderPipe } from '../../data/ProductOrder/ProductOrderPipe';
+import { Button } from '../../components/controls/Button/Button';
 
 interface IProductProps {
   product: IProduct;
@@ -45,8 +46,8 @@ const Product = (props: IProductProps) => {
               className={styles.image}
               src={image}
               alt={name}
-              width={424}
-              height={694}
+              width={330}
+              height={540}
             />
           </div>
           <div className={styles.right}>
@@ -60,9 +61,9 @@ const Product = (props: IProductProps) => {
               <ProductSizesSelector value={selectedSize} sizes={sizes} onChange={handleChangeSize} />
             </div>
 
-            <button className={styles.addButton} onClick={onAddButtonClick}>
-              Add to cart
-            </button>
+            <div className={styles.addButton}>
+              <Button onClick={onAddButtonClick}>Add to cart</Button>
+            </div>
           </div>
         </div>
       </section>

@@ -2,10 +2,10 @@ import Head from 'next/head';
 import ProductsList from '../components/ProductsList/ProductsList';
 import { getProducts } from '../store/products';
 import { wrapper } from '../store/store';
-import styles from '../styles/pages/Home.module.css';
+import styles from '../styles/pages/HomePage.module.css';
 
 // FIXME унифицировать title
-const Home = () => {
+const HomePage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -18,9 +18,9 @@ const Home = () => {
   )
 };
 
-export default Home;
+export default HomePage;
 
-Home.getInitialProps = wrapper.getInitialPageProps(
+HomePage.getInitialProps = wrapper.getInitialPageProps(
   ({ dispatch }) =>
     async () => {
       await dispatch(getProducts());

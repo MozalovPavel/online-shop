@@ -13,3 +13,8 @@
 .root:active {
     background-color: #222;
 }
+
+.root:disabled {
+    cursor: default;
+    background-color: #7e7e7e;
+}

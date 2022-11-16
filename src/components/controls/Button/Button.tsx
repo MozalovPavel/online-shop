@@ -3,15 +3,16 @@ import { PropsWithChildren } from "react";
 import styles from "./Button.module.css";
 
 interface IButtonProps {
-    onClick: () => void;
     className?: string; 
+    disabled?: boolean;
+    onClick: () => void;
 }
 
 export const Button = (props: PropsWithChildren<IButtonProps>) => {
-    const {children, onClick, className} = props;
+    const {children, onClick, className, disabled} = props;
 
     return (
-        <button className={classNames(styles.root, className)} onClick={onClick}>
+        <button disabled={disabled} className={classNames(styles.root, className)} onClick={onClick}>
             {children}
         </button>
     );

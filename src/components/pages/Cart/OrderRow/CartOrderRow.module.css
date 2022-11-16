@@ -1,0 +1,23 @@
+.root {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+}
+
+.removeButton {
+    cursor: pointer;
+}
+
+.name {
+    flex: 1 1 auto;
+}
+
+.size {
+    color: #62636D;
+    padding: 0 10px;
+}
+
+.specialInCents {
+    font-weight: 600;
+    padding-right: 10px;
+}

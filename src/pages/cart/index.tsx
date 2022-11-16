@@ -1,14 +1,15 @@
 import Head from 'next/head';
 import Caption from '../../components/Caption/Caption';
-import OrderRow from '../../components/OrderRow/OrderRow';
+import CartPayment from '../../components/pages/Cart/CartPayment/CartPayment';
+import CartOrderRow from '../../components/pages/Cart/OrderRow/CartOrderRow';
 import { ProductOrderPipe } from '../../data/ProductOrder/ProductOrderPipe';
 import { createOrder } from '../../store/checkout';
 import { useAppDispatch } from '../../store/hooks';
 import { cleanOrders } from '../../store/orders';
 import { useOrders } from '../../store/orders/hooks';
-import styles from '../../styles/pages/Orders.module.css';
+import styles from '../../styles/pages/CartPage.module.css';
 
-const Orders = () => {
+const CartPage = () => {
   const orders = useOrders();
 
   const isEmpty = !orders.length;
@@ -23,24 +24,27 @@ const Orders = () => {
     console.log({orderId});
     
     alert(`Order code is ${orderId}`);
-    
+
     dispatch(cleanOrders());
   };
 
   return (
     <section>
       <Head>
-        <title>Online shop | Orders</title>
+        <title>Online shop | Cart</title>
       </Head>
-      <Caption>Orders</Caption>
+      <Caption>My order</Caption>
       <div className={styles.root}>
         {!isEmpty 
           ? (
-            <>
-              {orders.map((order) => <OrderRow key={order.orderId} order={order} />)}
-              <span>${totalAmount}</span>
-              <button onClick={handleOrder}>To order</button>
-            </>
+            <div className={styles.container}>
+              <div className={styles.positionsList}>
+                {orders.map((order) => <CartOrderRow key={order.orderId} order={order} />)}
+              </div>
+              <div className={styles.payment}>
+                <CartPayment />
+              </div>
+            </div>
           ) 
           : "Cart is empty"
         }
@@ -49,4 +53,4 @@ const Orders = () => {
   )
 };
 
-export default Orders;
+export default CartPage;

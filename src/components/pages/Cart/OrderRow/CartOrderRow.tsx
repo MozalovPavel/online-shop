@@ -1,13 +1,13 @@
-import { IProductOrder } from "../../data/ProductOrder/ProductOrder";
-import { useAppDispatch } from "../../store/hooks";
-import { removeOrder } from "../../store/orders";
-import styles from './OrderRow.module.css';
+import { IProductOrder } from "../../../../data/ProductOrder/ProductOrder";
+import { useAppDispatch } from "../../../../store/hooks";
+import { removeOrder } from "../../../../store/orders";
+import styles from './CartOrderRow.module.css';
 
-interface IOrderRowProps {
+interface ICartOrderRowProps {
     order: IProductOrder;
 }
 
-const OrderRow = (props: IOrderRowProps) => {
+const CartOrderRow = (props: ICartOrderRowProps) => {
     const {order: {name, size, specialInCents, orderId}} = props;
 
     const dispatch = useAppDispatch();
@@ -26,4 +26,4 @@ const OrderRow = (props: IOrderRowProps) => {
     );
 };
 
-export default OrderRow;
+export default CartOrderRow;

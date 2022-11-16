@@ -52,13 +52,13 @@ const Pagination = (props: IPaginationProps) => {
     return (
         <div className={styles.paginationContainer}>
             <div
-                className={classnames(styles.paginationItem, styles.doubleArrow, {
+                className={classnames(styles.paginationItem, styles.doubleArrow, styles.left, {
                     [styles.disabled]: currentPage === 1
                 })}
                 onClick={gotToStart}
             />
             <div
-                className={classnames(styles.paginationItem, styles.arrow, {
+                className={classnames(styles.paginationItem, styles.arrow, styles.left, {
                     [styles.disabled]: currentPage === 1
                 })}
                 onClick={goToPrevious}

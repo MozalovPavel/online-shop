@@ -16,7 +16,7 @@ const initialState: ProductsState = {
 
 export const productsReducer = createReducer(initialState, builder => {
   builder
-    .addCase(getProducts.pending, state => ({...state, pending: true}))
+    .addCase(getProducts.pending, state => ({ ...state, pending: true }))
     .addCase(getProducts.fulfilled, (state, { payload }) => ({
       ...state,
       pending: false,

@@ -7,7 +7,6 @@ interface IProductSizesSelectorProps {
     onChange: (size: ProductSize) => void;
 }
 
-// FIXME обернуть мемо хуками большие поддеревья
 const ProductSizesSelector = (props: IProductSizesSelectorProps) => {
     const { sizes, onChange, value } = props;
 
@@ -37,7 +36,6 @@ const ProductSizesSelector = (props: IProductSizesSelectorProps) => {
                     </label>
                 ))}
             </div>
-
         </div>
     );
 };

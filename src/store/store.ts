@@ -21,8 +21,8 @@ const reducers = {
 const combinedReducer = combineReducers(reducers);
 
 const reducer: Reducer<ReturnType<typeof combinedReducer>, AnyAction> = (state, action) => {
-    console.log({state, action});
-    
+    console.log({ state, action });
+
     if (action.type === HYDRATE) {
         const nextState = {
             ...state,

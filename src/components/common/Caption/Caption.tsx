@@ -1,5 +1,5 @@
-import { PropsWithChildren } from 'react';
-import styles from './Caption.module.css';
+import { PropsWithChildren } from "react";
+import styles from "./Caption.module.css";
 
 const Caption = ({ children }: PropsWithChildren<{}>) => {
     return (

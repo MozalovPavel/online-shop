@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import {GTag} from "./GTag";
+import { GTag } from "./GTag";
 
 export const useRoutesGA = () => {
     const router = useRouter();

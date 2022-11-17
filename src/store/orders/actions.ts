@@ -7,8 +7,6 @@ enum Actions {
     CLEAN_ORDERS = "orders/CLEAN_ORDERS",
 }
 
-// FIXME кавычки поправь
-
 export const addOrder = createAction<IProductOrder>(Actions.ADD_ORDER);
 export const removeOrder = createAction<number>(Actions.REMOVE_ORDER);
 export const cleanOrders = createAction(Actions.CLEAN_ORDERS);

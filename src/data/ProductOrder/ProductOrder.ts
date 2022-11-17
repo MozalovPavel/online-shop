@@ -1,6 +1,5 @@
 import { ProductSize } from "../Product";
 
-// FIXME переименовать все в Product/Cart. Ордер уже заказ
 export interface IProductOrder {
     productId: number;
     size: ProductSize;

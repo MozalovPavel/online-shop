@@ -17,7 +17,7 @@ const CartPage = () => {
       </Head>
       <Caption>My order</Caption>
       <div className={styles.root}>
-        {!isEmpty 
+        {!isEmpty
           ? (
             <div className={styles.container}>
               <div className={styles.positionsList}>
@@ -27,7 +27,7 @@ const CartPage = () => {
                 <CartPayment />
               </div>
             </div>
-          ) 
+          )
           : "Cart is empty"
         }
       </div>

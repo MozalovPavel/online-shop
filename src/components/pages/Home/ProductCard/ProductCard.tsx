@@ -2,28 +2,28 @@ import Image from 'next/image';
 import styles from './ProductCard.module.css';
 import { IProduct } from '../../../../data/Product';
 import Link from 'next/link';
-
-// FIXME переместить
+import { PagesRoutesHelper } from '../../../../data/Routes';
 
 interface IProductCardProps {
     product: IProduct;
 }
 
-// FIXME вынести высоты
+const IMAGE_WIDTH = 424;
+const IMAGE_HEIGHT = 694;
 
 const ProductCard = (props: IProductCardProps) => {
-    const {product} = props;
-    const {special, price, sizes, name} = product
-    
+    const { product } = props;
+    const { special, price, sizes, name } = product
+
     return (
         <article className={styles.root}>
-            <Link href={`/product/${product.id}`}>
-                <Image 
+            <Link href={PagesRoutesHelper.getProductRoute(product.id)}>
+                <Image
                     className={styles.image}
-                    src={product.image} 
+                    src={product.image}
                     alt={name}
-                    width={424}
-                    height={694}
+                    width={IMAGE_WIDTH}
+                    height={IMAGE_HEIGHT}
                 />
                 <span className={styles.title}>{name}</span>
             </Link>

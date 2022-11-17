@@ -15,7 +15,7 @@ export const usePagination = (props: IUsePaginationProps) => {
         currentPage,
         siblingCount = 1
     } = props;
-    
+
     return useMemo(() => {
         const totalPageNumbers = siblingCount + 5;
 

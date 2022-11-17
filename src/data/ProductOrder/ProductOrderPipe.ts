@@ -9,8 +9,7 @@ export class ProductOrderPipe {
         return {productId: id, size, name, specialInCents, orderId: getRenderKey()};
     }; 
 
-    // FIXME переименовать преордер и вынести тип
-    static toOrders = ({size, productId}: IProductOrder): ICheckoutOrder => ({
+    static toCheckoutOrders = ({size, productId}: IProductOrder): ICheckoutOrder => ({
         id: productId, size
     });
 }

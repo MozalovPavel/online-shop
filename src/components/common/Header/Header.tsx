@@ -6,26 +6,28 @@ import commonStyles from '../../../styles/CommonLayout.module.css';
 import logo from '../../../../public/logo.svg';
 import Cart from '../Cart/Cart';
 import { useOrders } from '../../../store/orders/hooks';
+import { PagesRoutes } from '../../../data/Routes';
 
-// FIXME вынести роуты в хелпер
+const IMAGE_WIDTH = 143;
+const IMAGE_HEIGHT = 30;
 
 const Header = () => {
 	const orders = useOrders();
-	const router  = useRouter();
+	const router = useRouter();
 
 	const goToOrders = () => {
-		router.push("/cart");
+		router.push(PagesRoutes.Cart);
 	};
 
 	return (
 		<header className={`${styles.navbar} ${commonStyles.leftRightlayoutPaddings}`}>
-			<Link href="/">
+			<Link href={PagesRoutes.Root}>
 				<Image
 					className={styles.logo}
 					src={logo}
 					alt="Lucy in the sky inc"
-					width={143}
-					height={30}
+					width={IMAGE_WIDTH}
+					height={IMAGE_HEIGHT}
 					priority
 				/>
 			</Link>

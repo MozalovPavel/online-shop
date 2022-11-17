@@ -9,7 +9,7 @@ interface ICartProps {
 }
 
 const Cart = (props: ICartProps) => {
-    const {ordersCount, onClick} = props;
+    const { ordersCount, onClick } = props;
     return (
         <div className={styles.root} onClick={onClick}>
             <Image src={cartImage} width={24} height={24} alt="Cart" />
@@ -17,5 +17,5 @@ const Cart = (props: ICartProps) => {
         </div>
     );
 };
-   
-   export default Cart;
+
+export default Cart;

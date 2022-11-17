@@ -6,8 +6,8 @@ import { Provider } from 'react-redux';
 import { useRoutesGA } from '../analytics/useRoutesGA';
 
 const App = ({ Component, ...rest }: AppProps) => {
-  const {store, props} = wrapper.useWrappedStore(rest);
-  
+  const { store, props } = wrapper.useWrappedStore(rest);
+
   useRoutesGA();
 
   return (

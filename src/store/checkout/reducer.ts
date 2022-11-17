@@ -13,7 +13,7 @@ const initialState: ICheckoutState = {
 
 export const checkoutReducer = createReducer(initialState, builder => {
   builder
-    .addCase(createOrder.pending, state => ({...state, pending: true}))
+    .addCase(createOrder.pending, state => ({ ...state, pending: true }))
     .addCase(createOrder.fulfilled, state => ({
       ...state,
       pending: false

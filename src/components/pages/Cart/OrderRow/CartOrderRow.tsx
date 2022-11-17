@@ -8,7 +8,7 @@ interface ICartOrderRowProps {
 }
 
 const CartOrderRow = (props: ICartOrderRowProps) => {
-    const {order: {name, size, specialInCents, orderId}} = props;
+    const { order: { name, size, specialInCents, orderId } } = props;
 
     const dispatch = useAppDispatch();
 
@@ -20,7 +20,7 @@ const CartOrderRow = (props: ICartOrderRowProps) => {
         <div className={styles.root}>
             <span className={styles.name}>{name}</span>
             <span className={styles.size}>{size}</span>
-            <span className={styles.specialInCents}>${specialInCents/100}</span>
+            <span className={styles.specialInCents}>${specialInCents / 100}</span>
             <span className={styles.removeButton} onClick={handleRemove}>X</span>
         </div>
     );

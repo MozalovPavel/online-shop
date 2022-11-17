@@ -10,11 +10,6 @@ interface IPaginationProps {
     onPageChange: (page: number) => void;
 }
 
-// FIXME поправить
-// FIXME переместить стили к компонентам
-
-// FIXME вынести хендлеры
-
 const Pagination = (props: IPaginationProps) => {
     const {
         onPageChange,

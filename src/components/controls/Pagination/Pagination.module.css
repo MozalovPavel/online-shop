@@ -40,7 +40,8 @@
     background: center no-repeat url("../../../../public/icons/arrow.svg");
 }
 
-.doubleArrow, .arrow {
+.doubleArrow,
+.arrow {
     display: flex;
 }
 

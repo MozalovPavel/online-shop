@@ -1,5 +1,5 @@
 import Script from "next/script";
-import {GTag} from "./GTag";
+import { GTag } from "./GTag";
 
 export const GAScripts = () => {
     return (
@@ -19,7 +19,7 @@ export const GAScripts = () => {
                     
                         gtag('config', '${GTag.TRACKING_ID}');
                     `
-                    }
+                }
                 }
             />
         </>

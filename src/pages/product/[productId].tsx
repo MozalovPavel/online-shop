@@ -6,7 +6,7 @@ import Caption from '../../components/common/Caption/Caption';
 import { IProduct, ProductSize } from '../../data/Product';
 import Image from 'next/image';
 import styles from '../../styles/pages/ProductPage.module.css';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { useAppDispatch } from '../../store/hooks';
 import { addOrder } from '../../store/orders';
 import ProductSizesSelector from '../../components/pages/Product/ProductSizesSelector/ProductSizesSelector';
@@ -16,6 +16,9 @@ import { Button } from '../../components/controls/Button/Button';
 interface IProductProps {
   product: IProduct;
 }
+
+const IMAGE_WIDTH = 330;
+const IMAGE_HEIGHT = 540;
 
 const Product = (props: IProductProps) => {
   const { product } = props;
@@ -45,8 +48,8 @@ const Product = (props: IProductProps) => {
             className={styles.image}
             src={image}
             alt={name}
-            width={330}
-            height={540}
+            width={IMAGE_WIDTH}
+            height={IMAGE_HEIGHT}
           />
           <div className={styles.infoContainer}>
             <div className={styles.description}>
@@ -58,7 +61,6 @@ const Product = (props: IProductProps) => {
             <div className={styles.sizeSelector}>
               <ProductSizesSelector value={selectedSize} sizes={sizes} onChange={handleChangeSize} />
             </div>
-
             <div className={styles.addButton}>
               <Button onClick={onAddButtonClick}>Add to cart</Button>
             </div>

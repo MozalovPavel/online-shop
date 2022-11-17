@@ -4,17 +4,15 @@ import { IProduct } from '../../data/Product';
 import { productApi } from '../../api/ProductApi';
 
 enum Actions {
-    GET_PRODUCTS = "products/GET_PRODUCTS"
+  GET_PRODUCTS = "products/GET_PRODUCTS"
 }
-
-// FIXME кавычки поправь
 
 export const getProducts = createAsyncThunk(Actions.GET_PRODUCTS, async (page: number = 1): Promise<IPaginatable<IProduct>> => {
   const response = await productApi.getProducts(page);
-  
+
   return {
     items: response.data.data,
     page,
-    totalPages: response.data.pageCount 
+    totalPages: response.data.pageCount
   };
 });

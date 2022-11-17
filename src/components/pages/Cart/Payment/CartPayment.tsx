@@ -18,7 +18,7 @@ const CartPayment = () => {
     const dispatch = useAppDispatch();
 
     const handleOrder = async () => {
-        const ordersForPlace = orders.map(ProductOrderPipe.toOrders);
+        const ordersForPlace = orders.map(ProductOrderPipe.toCheckoutOrders);
         const orderId = await dispatch(createOrder(ordersForPlace)).unwrap();
 
         alert(`Order code is ${orderId}`);

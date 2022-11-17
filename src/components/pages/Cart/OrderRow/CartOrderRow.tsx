@@ -1,7 +1,7 @@
 import { IProductOrder } from "../../../../data/ProductOrder/ProductOrder";
 import { useAppDispatch } from "../../../../store/hooks";
 import { removeOrder } from "../../../../store/orders";
-import styles from './CartOrderRow.module.css';
+import styles from "./CartOrderRow.module.css";
 
 interface ICartOrderRowProps {
     order: IProductOrder;

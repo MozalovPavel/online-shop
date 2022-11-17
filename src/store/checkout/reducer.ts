@@ -1,5 +1,5 @@
-import { createReducer } from '@reduxjs/toolkit';
-import { createOrder } from './actions';
+import { createReducer } from "@reduxjs/toolkit";
+import { createOrder } from "./actions";
 
 export interface ICheckoutState {
   pending: boolean;

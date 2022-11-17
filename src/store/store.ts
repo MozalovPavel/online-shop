@@ -6,11 +6,11 @@ import {
     AnyAction,
     Reducer,
     CombinedState
-} from '@reduxjs/toolkit';
-import { createWrapper, HYDRATE } from 'next-redux-wrapper';
-import { checkoutReducer } from './checkout';
-import { ordersReducer } from './orders';
-import { productsReducer } from './products';
+} from "@reduxjs/toolkit";
+import { createWrapper, HYDRATE } from "next-redux-wrapper";
+import { checkoutReducer } from "./checkout";
+import { ordersReducer } from "./orders";
+import { productsReducer } from "./products";
 
 const reducers = {
     products: productsReducer,
@@ -41,8 +41,8 @@ export const makeStore = () =>
 
 type Store = ReturnType<typeof makeStore>;
 
-export type AppDispatch = Store['dispatch'];
-export type RootState = ReturnType<Store['getState']>;
+export type AppDispatch = Store["dispatch"];
+export type RootState = ReturnType<Store["getState"]>;
 export type AppThunk<ReturnType = void> = ThunkAction<
     ReturnType,
     RootState,

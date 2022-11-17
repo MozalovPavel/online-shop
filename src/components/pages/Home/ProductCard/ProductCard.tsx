@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import styles from './ProductCard.module.css';
-import { IProduct } from '../../../../data/Product';
-import Link from 'next/link';
-import { PagesRoutesHelper } from '../../../../data/Routes';
+import Image from "next/image";
+import styles from "./ProductCard.module.css";
+import { IProduct } from "../../../../data/Product";
+import Link from "next/link";
+import { PagesRoutesHelper } from "../../../../data/Routes";
 
 interface IProductCardProps {
     product: IProduct;

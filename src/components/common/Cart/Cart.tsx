@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import styles from './Cart.module.css';
+import Image from "next/image";
+import styles from "./Cart.module.css";
 
-import cartImage from '../../../../public/icons/cart.svg';
+import cartImage from "../../../../public/icons/cart.svg";
 
 interface ICartProps {
     ordersCount: number;

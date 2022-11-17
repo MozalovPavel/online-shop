@@ -15,9 +15,9 @@ export const GAScripts = () => {
                     __html: `
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
+                        gtag("js", new Date());
                     
-                        gtag('config', '${GTag.TRACKING_ID}');
+                        gtag("config", "${GTag.TRACKING_ID}");
                     `
                 }
                 }

@@ -1,6 +1,6 @@
 import Caption from "../../../common/Caption/Caption";
 import ProductCard from "../ProductCard/ProductCard";
-import styles from './Products.module.css';
+import styles from "./Products.module.css";
 import { getProducts, useProducts } from "../../../../store/products";
 import { wrapper } from "../../../../store/store";
 import Pagination from "../../../controls/Pagination/Pagination";

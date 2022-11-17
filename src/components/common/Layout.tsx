@@ -1,7 +1,7 @@
-import Header from './Header/Header';
-import { PropsWithChildren } from 'react';
-import commonStyles from '../../styles/CommonLayout.module.css';
-import classNames from 'classnames';
+import Header from "./Header/Header";
+import { PropsWithChildren } from "react";
+import commonStyles from "../../styles/CommonLayout.module.css";
+import classNames from "classnames";
 
 const Layout = ({ children }: PropsWithChildren<{}>) => (
     <>

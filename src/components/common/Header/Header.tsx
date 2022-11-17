@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { useRouter } from 'next/router'
-import styles from './Header.module.css';
-import commonStyles from '../../../styles/CommonLayout.module.css';
-import logo from '../../../../public/logo.svg';
-import Cart from '../Cart/Cart';
-import { useOrders } from '../../../store/orders/hooks';
-import { PagesRoutes } from '../../../data/Routes';
+import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/router"
+import styles from "./Header.module.css";
+import commonStyles from "../../../styles/CommonLayout.module.css";
+import logo from "../../../../public/logo.svg";
+import Cart from "../Cart/Cart";
+import { useOrders } from "../../../store/orders/hooks";
+import { PagesRoutes } from "../../../data/Routes";
 
 const IMAGE_WIDTH = 143;
 const IMAGE_HEIGHT = 30;

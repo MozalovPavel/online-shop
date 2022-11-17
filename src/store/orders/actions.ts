@@ -1,5 +1,5 @@
-import { createAction } from '@reduxjs/toolkit';
-import { IProductOrder } from '../../data/ProductOrder/ProductOrder';
+import { createAction } from "@reduxjs/toolkit";
+import { IProductOrder } from "../../data/ProductOrder/ProductOrder";
 
 enum Actions {
     ADD_ORDER = "orders/ADD_ORDER",

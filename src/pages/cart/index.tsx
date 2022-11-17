@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import Caption from '../../components/common/Caption/Caption';
-import CartPayment from '../../components/pages/Cart/Payment/CartPayment';
-import CartOrderRow from '../../components/pages/Cart/OrderRow/CartOrderRow';
-import { useOrders } from '../../store/orders/hooks';
-import styles from '../../styles/pages/CartPage.module.css';
+import Head from "next/head";
+import Caption from "../../components/common/Caption/Caption";
+import CartPayment from "../../components/pages/Cart/Payment/CartPayment";
+import CartOrderRow from "../../components/pages/Cart/OrderRow/CartOrderRow";
+import { useOrders } from "../../store/orders/hooks";
+import styles from "../../styles/pages/CartPage.module.css";
 
 const CartPage = () => {
   const orders = useOrders();

@@ -5,7 +5,7 @@ import { useAppDispatch } from "../../../../store/hooks";
 import { cleanOrders } from "../../../../store/orders";
 import { useOrders } from "../../../../store/orders/hooks";
 import { Button } from "../../../controls/Button/Button";
-import styles from './CartPayment.module.css';
+import styles from "./CartPayment.module.css";
 
 const CartPayment = () => {
     const orders = useOrders()

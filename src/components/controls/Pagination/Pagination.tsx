@@ -1,6 +1,6 @@
 import classnames from "classnames";
 import { DOTS, usePagination } from "./usePagination";
-import styles from './Pagination.module.css';
+import styles from "./Pagination.module.css";
 
 interface IPaginationProps {
     currentPage: number;

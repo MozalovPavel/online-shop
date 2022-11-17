@@ -1,7 +1,7 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
-import { IPaginatable } from '../../data/Paginatable';
-import { IProduct } from '../../data/Product';
-import { productApi } from '../../api/ProductApi';
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import { IPaginatable } from "../../data/Paginatable";
+import { IProduct } from "../../data/Product";
+import { productApi } from "../../api/ProductApi";
 
 enum Actions {
   GET_PRODUCTS = "products/GET_PRODUCTS"

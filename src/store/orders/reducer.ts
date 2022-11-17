@@ -1,6 +1,6 @@
-import { createReducer } from '@reduxjs/toolkit';
-import { IProductOrder } from '../../data/ProductOrder/ProductOrder';
-import { addOrder, cleanOrders, removeOrder } from './actions';
+import { createReducer } from "@reduxjs/toolkit";
+import { IProductOrder } from "../../data/ProductOrder/ProductOrder";
+import { addOrder, cleanOrders, removeOrder } from "./actions";
 
 export interface IOrdersState {
   orders: IProductOrder[];

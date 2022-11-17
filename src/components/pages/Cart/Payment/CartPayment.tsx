@@ -13,7 +13,7 @@ const CartPayment = () => {
 
     const totalAmount = useMemo(() => (
         orders.reduce((total, order) => total + order.specialInCents, 0) / 100
-    ), []);
+    ), [orders]);
 
     const dispatch = useAppDispatch();
 

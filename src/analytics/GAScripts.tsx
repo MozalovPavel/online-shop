@@ -1,12 +1,12 @@
 import Script from "next/script";
-import { GTag } from "./GTag";
+import { GATag } from "./GTag";
 
 export const GAScripts = () => {
     return (
         <>
             <Script
                 strategy="afterInteractive"
-                src={`https://www.googletagmanager.com/gtag/js?id=${GTag.TRACKING_ID}`}
+                src={`https://www.googletagmanager.com/gtag/js?id=${GATag.TRACKING_ID}`}
             />
             <Script
                 id="gtag-init"
@@ -17,7 +17,7 @@ export const GAScripts = () => {
                         function gtag(){dataLayer.push(arguments);}
                         gtag("js", new Date());
                     
-                        gtag("config", "${GTag.TRACKING_ID}");
+                        gtag("config", "${GATag.TRACKING_ID}");
                     `
                 }
                 }

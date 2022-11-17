@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import { GAScripts } from "../analytics/GAScripts";
 
-export default () => {
+const Document = () => {
   return (
     <Html>
       <Head>
@@ -16,3 +16,5 @@ export default () => {
     </Html>
   )
 };
+
+export default Document;

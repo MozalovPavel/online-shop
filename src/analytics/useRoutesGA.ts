@@ -1,13 +1,13 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { GTag } from "./GTag";
+import { GATag } from "./GTag";
 
 export const useRoutesGA = () => {
     const router = useRouter();
 
     useEffect(() => {
         const handleRouteChange = (url: URL) => {
-            GTag.pageview(url);
+            GATag.pageview(url);
         }
         router.events.on("routeChangeComplete", handleRouteChange);
         router.events.on("hashChangeComplete", handleRouteChange);

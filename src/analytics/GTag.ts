@@ -5,10 +5,10 @@ type GTagEvent = {
     value: number;
 };
 
-export class GTag {
-    static TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
+export class GATag {
+    static TRACKING_ID: string = process.env.NEXT_PUBLIC_GA_TRACKING_ID!;
     static pageview = (url: URL) => {
-        window.gtag?.("config", GTag.TRACKING_ID, {
+        window.gtag?.("config", GATag.TRACKING_ID, {
             page_path: url,
         });
     };
